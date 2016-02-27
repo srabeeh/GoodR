@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-p5-Bwc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-In / S/ign-Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hm-GZ-eUP">
+                                        <rect key="frame" x="23" y="25" width="188" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="QoD-Lc-3zD"/>
+                                            <constraint firstAttribute="width" constant="188" id="Xhp-O8-ga7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.31175385239999998" blue="0.086036058770000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="8hm-GZ-eUP" firstAttribute="top" secondItem="X7P-p5-Bwc" secondAttribute="top" constant="25" id="hzY-zZ-Yms"/>
+                                    <constraint firstAttribute="height" constant="120" id="iAh-Tl-F03"/>
+                                    <constraint firstItem="8hm-GZ-eUP" firstAttribute="leading" secondItem="X7P-p5-Bwc" secondAttribute="leading" constant="23" id="ziA-em-ZHd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRA-dz-1ml" customClass="CustomDesignView" customModule="GoodR" customModuleProvider="target">
+                                <rect key="frame" x="20" y="70" width="560" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="3ON-v0-du0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uRA-dz-1ml" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1hc-ez-Le2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X7P-p5-Bwc" secondAttribute="trailing" constant="-20" id="4TQ-cP-oTp"/>
+                            <constraint firstItem="uRA-dz-1ml" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dg0-1R-dJK"/>
+                            <constraint firstItem="X7P-p5-Bwc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ieu-Yd-qvo"/>
+                            <constraint firstItem="uRA-dz-1ml" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="q8g-t4-3UA"/>
+                            <constraint firstItem="X7P-p5-Bwc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="uFJ-sl-yuj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="281" y="440"/>
         </scene>
     </scenes>
 </document>

@@ -16,6 +16,8 @@
 		2233651F1C7E99960049E58F /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2233651B1C7E99960049E58F /* NotoSans-BoldItalic.ttf */; };
 		223365201C7E99960049E58F /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2233651C1C7E99960049E58F /* NotoSans-Italic.ttf */; };
 		223365211C7E99960049E58F /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2233651D1C7E99960049E58F /* NotoSans-Regular.ttf */; };
+		223365231C7EB54A0049E58F /* CustomDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365221C7EB54A0049E58F /* CustomDesignView.swift */; };
+		223365261C7EB6190049E58F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365251C7EB6190049E58F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		2233651B1C7E99960049E58F /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		2233651C1C7E99960049E58F /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		2233651D1C7E99960049E58F /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		223365221C7EB54A0049E58F /* CustomDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDesignView.swift; sourceTree = "<group>"; };
+		223365251C7EB6190049E58F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		223365031C7E98000049E58F /* GoodR */ = {
 			isa = PBXGroup;
 			children = (
+				223365241C7EB5EE0049E58F /* Util */,
 				223365191C7E994D0049E58F /* Resources */,
 				223365181C7E990F0049E58F /* Controllers */,
 				223365171C7E99090049E58F /* Models */,
@@ -79,6 +84,7 @@
 		223365161C7E98F90049E58F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				223365221C7EB54A0049E58F /* CustomDesignView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -106,6 +112,14 @@
 				2233651D1C7E99960049E58F /* NotoSans-Regular.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		223365241C7EB5EE0049E58F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				223365251C7EB6190049E58F /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +200,8 @@
 			files = (
 				223365071C7E98000049E58F /* ViewController.swift in Sources */,
 				223365051C7E98000049E58F /* AppDelegate.swift in Sources */,
+				223365231C7EB54A0049E58F /* CustomDesignView.swift in Sources */,
+				223365261C7EB6190049E58F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoodR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.GoodR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.goodr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -311,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoodR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.GoodR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.goodr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
