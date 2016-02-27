@@ -1,0 +1,6 @@
+framework module Pods_GoodR {
+  umbrella header "Pods-GoodR-umbrella.h"
+
+  export *
+  module * { export * }
+}
