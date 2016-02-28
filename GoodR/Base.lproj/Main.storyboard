@@ -106,7 +106,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-ce-dNr" customClass="CustomButton" customModule="GoodR" customModuleProvider="target">
-                                                <rect key="frame" x="145" y="36" width="395" height="33"/>
+                                                <rect key="frame" x="145" y="38" width="395" height="30"/>
                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
                                                 <state key="normal" title="Facebook Login">
@@ -217,10 +217,33 @@
                             <constraint firstItem="06F-0L-Kl8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yfe-C1-YAY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="L8c-ue-iYy" id="DOF-cw-q1g"/>
+                        <outlet property="passwordField" destination="YzG-LA-LNc" id="R0c-PD-YCh"/>
+                        <segue destination="Lgb-fn-G5D" kind="show" identifier="LoggedIn" id="i8i-Ed-U4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="-417"/>
+            <point key="canvasLocation" x="406" y="-424"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kFZ-yf-Pvl">
+            <objects>
+                <viewController id="Lgb-fn-G5D" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TMd-Qh-Mb2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ctk-3B-tdx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7zx-EY-P9q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.4941176471" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htd-EC-S4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="-424"/>
         </scene>
     </scenes>
     <resources>

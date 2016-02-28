@@ -18,6 +18,7 @@
 		223365211C7E99960049E58F /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2233651D1C7E99960049E58F /* NotoSans-Regular.ttf */; };
 		223365231C7EB54A0049E58F /* CustomDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365221C7EB54A0049E58F /* CustomDesignView.swift */; };
 		223365261C7EB6190049E58F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365251C7EB6190049E58F /* Constants.swift */; };
+		22ADDCB11C81AB0100661AD9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ADDCB01C81AB0100661AD9 /* DataService.swift */; };
 		22FFC9F01C81342D00F1E3EC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC9EF1C81342D00F1E3EC /* CustomButton.swift */; };
 		22FFC9F21C814E0700F1E3EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC9F11C814E0700F1E3EC /* CustomTextField.swift */; };
 		22FFC9F71C81585100F1E3EC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FFC9F41C81585100F1E3EC /* Bolts.framework */; };
@@ -40,6 +41,7 @@
 		2233651D1C7E99960049E58F /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		223365221C7EB54A0049E58F /* CustomDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDesignView.swift; sourceTree = "<group>"; };
 		223365251C7EB6190049E58F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22ADDCB01C81AB0100661AD9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		22FFC9EF1C81342D00F1E3EC /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		22FFC9F11C814E0700F1E3EC /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		22FFC9F41C81585100F1E3EC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		223365031C7E98000049E58F /* GoodR */ = {
 			isa = PBXGroup;
 			children = (
+				22ADDCAF1C81AA9700661AD9 /* Services */,
 				22FFC9F31C8157B500F1E3EC /* Frameworks */,
 				223365241C7EB5EE0049E58F /* Util */,
 				223365191C7E994D0049E58F /* Resources */,
@@ -143,6 +146,14 @@
 				223365251C7EB6190049E58F /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		22ADDCAF1C81AA9700661AD9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				22ADDCB01C81AB0100661AD9 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		22FFC9F31C8157B500F1E3EC /* Frameworks */ = {
@@ -300,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223365071C7E98000049E58F /* ViewController.swift in Sources */,
+				22ADDCB11C81AB0100661AD9 /* DataService.swift in Sources */,
 				223365051C7E98000049E58F /* AppDelegate.swift in Sources */,
 				22FFC9F21C814E0700F1E3EC /* CustomTextField.swift in Sources */,
 				223365231C7EB54A0049E58F /* CustomDesignView.swift in Sources */,
