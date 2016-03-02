@@ -92,46 +92,10 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRA-dz-1ml" customClass="CustomDesignView" customModule="GoodR" customModuleProvider="target">
-                                <rect key="frame" x="20" y="70" width="560" height="125"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qan-Ks-wg0">
-                                        <rect key="frame" x="10" y="10" width="540" height="105"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FB-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WT1-Sk-cLj">
-                                                <rect key="frame" x="0.0" y="1" width="125" height="104"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="104" id="CCN-3B-bH5"/>
-                                                    <constraint firstAttribute="width" constant="125" id="LvB-2r-6if"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-ce-dNr" customClass="CustomButton" customModule="GoodR" customModuleProvider="target">
-                                                <rect key="frame" x="145" y="38" width="395" height="30"/>
-                                                <color key="backgroundColor" red="0.11764705882352941" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
-                                                <state key="normal" title="Facebook Login">
-                                                    <color key="titleColor" red="0.95957739582727786" green="0.99054364143706752" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="fbButtonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HVL-R9-B6d"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="3ON-v0-du0"/>
-                                    <constraint firstAttribute="trailing" secondItem="qan-Ks-wg0" secondAttribute="trailing" constant="10" id="42a-Mg-S1K"/>
-                                    <constraint firstItem="qan-Ks-wg0" firstAttribute="leading" secondItem="uRA-dz-1ml" secondAttribute="leading" constant="10" id="hiJ-os-aAz"/>
-                                    <constraint firstItem="qan-Ks-wg0" firstAttribute="top" secondItem="uRA-dz-1ml" secondAttribute="top" constant="10" id="iIz-BJ-fCQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="qan-Ks-wg0" secondAttribute="bottom" constant="10" id="k4L-KK-y7z"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06F-0L-Kl8" customClass="CustomDesignView" customModule="GoodR" customModuleProvider="target">
                                 <rect key="frame" x="20" y="215" width="560" height="365"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YzG-LA-LNc" customClass="CustomTextField" customModule="GoodR" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YzG-LA-LNc" customClass="CustomTextField" customModule="GoodR" customModuleProvider="target">
                                         <rect key="frame" x="8" y="99" width="544" height="35"/>
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -139,9 +103,9 @@
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8c-ue-iYy" customClass="CustomTextField" customModule="GoodR" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8c-ue-iYy" customClass="CustomTextField" customModule="GoodR" customModuleProvider="target">
                                         <rect key="frame" x="8" y="50" width="544" height="35"/>
                                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -177,9 +141,12 @@
                                             <constraint firstAttribute="height" constant="40" id="f68-B7-z5k"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
-                                        <state key="normal" title="Facebook Login">
+                                        <state key="normal" title="Login / Signup">
                                             <color key="titleColor" red="0.95957739580000001" green="0.99054364139999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="emailLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIQ-t8-w0o"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,6 +169,42 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRA-dz-1ml" customClass="CustomDesignView" customModule="GoodR" customModuleProvider="target">
+                                <rect key="frame" x="20" y="70" width="560" height="125"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qan-Ks-wg0">
+                                        <rect key="frame" x="10" y="10" width="540" height="105"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FB-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WT1-Sk-cLj">
+                                                <rect key="frame" x="0.0" y="18" width="90" height="69"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="69" id="CCN-3B-bH5"/>
+                                                    <constraint firstAttribute="width" constant="90" id="LvB-2r-6if"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-ce-dNr" customClass="CustomButton" customModule="GoodR" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="36" width="430" height="33"/>
+                                                <color key="backgroundColor" red="0.11764705882352941" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                                <state key="normal" title="Facebook Login">
+                                                    <color key="titleColor" red="0.95957739582727786" green="0.99054364143706752" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="fbButtonLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HVL-R9-B6d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="3ON-v0-du0"/>
+                                    <constraint firstAttribute="trailing" secondItem="qan-Ks-wg0" secondAttribute="trailing" constant="10" id="42a-Mg-S1K"/>
+                                    <constraint firstItem="qan-Ks-wg0" firstAttribute="leading" secondItem="uRA-dz-1ml" secondAttribute="leading" constant="10" id="hiJ-os-aAz"/>
+                                    <constraint firstItem="qan-Ks-wg0" firstAttribute="top" secondItem="uRA-dz-1ml" secondAttribute="top" constant="10" id="iIz-BJ-fCQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="qan-Ks-wg0" secondAttribute="bottom" constant="10" id="k4L-KK-y7z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -218,8 +221,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="L8c-ue-iYy" id="DOF-cw-q1g"/>
-                        <outlet property="passwordField" destination="YzG-LA-LNc" id="R0c-PD-YCh"/>
+                        <outlet property="emailField" destination="L8c-ue-iYy" id="v8e-h7-2cf"/>
+                        <outlet property="passwordField" destination="YzG-LA-LNc" id="D4W-eI-vjk"/>
                         <segue destination="Lgb-fn-G5D" kind="show" identifier="LoggedIn" id="i8i-Ed-U4f"/>
                     </connections>
                 </viewController>

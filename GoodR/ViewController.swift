@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil{
-            self.performSegueWithIdentifier(KEY_LOGGED_IN, sender: nil)
+            self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
         }
     }
     
@@ -49,24 +49,67 @@ class ViewController: UIViewController {
                         if error != nil {
                             print("Login failed. \(error)")
                         } else {
+                            // To Do: Remove print
                             print("Logged in! \(authData)")
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
-                            self.performSegueWithIdentifier(KEY_LOGGED_IN, sender: nil)
+                            self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                     }
                 })
             }
         })
     }
 
-    @IBAction func Login(sender: UIButton){
-        if let email = emailField.text where email != "", let pwd = passwordField.text where pwd !="" {
+    @IBAction func emailLogin(sender: UIButton){
+        if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
             
+            if email.isEmail{
+                
+                DataService.dataService.REF_FIREBASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
+                
+                if error != nil {
+                    
+                    print(error)
+                    
+                    if error.code == STATUS_USER_INVALID {
+                        DataService.dataService.REF_FIREBASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
+                            
+                            if error != nil {
+                                self.showErrorAlert("Problem creating account. Try something else", title: "Could not create account.")
+                            } else {
+                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
+                                
+                                DataService.dataService.REF_FIREBASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                            }
+                        })
+                    } else {
+                        if error.code == STATUS_PASSWORD_INVALID{
+                           self.showErrorAlert("You have entered an invalid password for this account", title: "Invalid Password")
+                        }
+                        self.showErrorAlert("Please check your username or password", title: "Could not login")
+                    }
+                    
+                } else {
+                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                }
+                
+            })
+            
+            } else {
+                self.showErrorAlert("Please enter a valid email address.", title: "Invalid Email Address.")
+            }
+            
+        } else {
+            self.showErrorAlert("You must enter an email and a password", title: "Email and Password Required")
         }
     }
+
     
-    func showErrorAlert(message: String, title: String){
-        
+    func showErrorAlert(alertMessage: String, title: String){
+        let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
     
 }
-

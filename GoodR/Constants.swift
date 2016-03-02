@@ -9,6 +9,16 @@
 import Foundation
 import UIKit
 
+// UI Styling
 let SHADOW_COLOR:CGFloat = 157.0 / 255.0
+
+// Keys
 let KEY_UID = "uid"
-let KEY_LOGGED_IN = "LoggedIn"
+
+// Segues
+let SEGUE_LOGGED_IN = "LoggedIn"
+
+// Status Codes
+let STATUS_EMAIL_INVALID = -5
+let STATUS_USER_INVALID = -8
+let STATUS_PASSWORD_INVALID = -6

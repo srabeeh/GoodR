@@ -13,6 +13,7 @@ class DataService {
     static let dataService = DataService()
     
     private var _REFBase = Firebase(url: "https://goodr.firebaseio.com")
+    private var _REFUsers = Firebase(url: "https://goodr.firebaseio.com/users")
     
     var REF_FIREBASE: Firebase {
         return _REFBase

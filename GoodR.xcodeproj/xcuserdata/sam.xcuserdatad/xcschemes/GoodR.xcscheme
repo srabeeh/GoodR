@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22102C9E1C866E77000E074B"
+               BuildableName = "GoodRTests.xctest"
+               BlueprintName = "GoodRTests"
+               ReferencedContainer = "container:GoodR.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22102CAC1C866E8D000E074B"
+               BuildableName = "GoodRUITests.xctest"
+               BlueprintName = "GoodRUITests"
+               ReferencedContainer = "container:GoodR.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

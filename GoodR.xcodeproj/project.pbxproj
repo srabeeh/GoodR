@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22102CA21C866E77000E074B /* GoodRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22102CA11C866E77000E074B /* GoodRTests.swift */; };
+		22102CB01C866E8D000E074B /* GoodRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22102CAF1C866E8D000E074B /* GoodRUITests.swift */; };
 		223365051C7E98000049E58F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365041C7E98000049E58F /* AppDelegate.swift */; };
 		223365071C7E98000049E58F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365061C7E98000049E58F /* ViewController.swift */; };
 		2233650A1C7E98000049E58F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223365081C7E98000049E58F /* Main.storyboard */; };
@@ -18,6 +20,7 @@
 		223365211C7E99960049E58F /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2233651D1C7E99960049E58F /* NotoSans-Regular.ttf */; };
 		223365231C7EB54A0049E58F /* CustomDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365221C7EB54A0049E58F /* CustomDesignView.swift */; };
 		223365261C7EB6190049E58F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365251C7EB6190049E58F /* Constants.swift */; };
+		22AC55881C86925400ABF126 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC55871C86925400ABF126 /* Utilities.swift */; };
 		22ADDCB11C81AB0100661AD9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ADDCB01C81AB0100661AD9 /* DataService.swift */; };
 		22FFC9F01C81342D00F1E3EC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC9EF1C81342D00F1E3EC /* CustomButton.swift */; };
 		22FFC9F21C814E0700F1E3EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC9F11C814E0700F1E3EC /* CustomTextField.swift */; };
@@ -27,7 +30,30 @@
 		F9A776B7DE315236FE60AACB /* Pods_GoodR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CA1CEC302D0291273A86B4 /* Pods_GoodR.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		22102CA41C866E77000E074B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223364F91C7E98000049E58F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 223365001C7E98000049E58F;
+			remoteInfo = GoodR;
+		};
+		22102CB21C866E8D000E074B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 223364F91C7E98000049E58F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 223365001C7E98000049E58F;
+			remoteInfo = GoodR;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		22102C9F1C866E77000E074B /* GoodRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22102CA11C866E77000E074B /* GoodRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodRTests.swift; sourceTree = "<group>"; };
+		22102CA31C866E77000E074B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22102CAD1C866E8D000E074B /* GoodRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22102CAF1C866E8D000E074B /* GoodRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodRUITests.swift; sourceTree = "<group>"; };
+		22102CB11C866E8D000E074B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223365011C7E98000049E58F /* GoodR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223365041C7E98000049E58F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223365061C7E98000049E58F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +67,7 @@
 		2233651D1C7E99960049E58F /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		223365221C7EB54A0049E58F /* CustomDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDesignView.swift; sourceTree = "<group>"; };
 		223365251C7EB6190049E58F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22AC55871C86925400ABF126 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		22ADDCB01C81AB0100661AD9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		22FFC9EF1C81342D00F1E3EC /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		22FFC9F11C814E0700F1E3EC /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -53,6 +80,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		22102C9C1C866E77000E074B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22102CAA1C866E8D000E074B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		223364FE1C7E98000049E58F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,10 +108,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22102CA01C866E77000E074B /* GoodRTests */ = {
+			isa = PBXGroup;
+			children = (
+				22102CA11C866E77000E074B /* GoodRTests.swift */,
+				22102CA31C866E77000E074B /* Info.plist */,
+			);
+			path = GoodRTests;
+			sourceTree = "<group>";
+		};
+		22102CAE1C866E8D000E074B /* GoodRUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22102CAF1C866E8D000E074B /* GoodRUITests.swift */,
+				22102CB11C866E8D000E074B /* Info.plist */,
+			);
+			path = GoodRUITests;
+			sourceTree = "<group>";
+		};
 		223364F81C7E98000049E58F = {
 			isa = PBXGroup;
 			children = (
 				223365031C7E98000049E58F /* GoodR */,
+				22102CA01C866E77000E074B /* GoodRTests */,
+				22102CAE1C866E8D000E074B /* GoodRUITests */,
 				223365021C7E98000049E58F /* Products */,
 				65EDD0DCDE8E5678E2A581B7 /* Pods */,
 				E3FE39AD49B0C33238C99C87 /* Frameworks */,
@@ -81,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				223365011C7E98000049E58F /* GoodR.app */,
+				22102C9F1C866E77000E074B /* GoodRTests.xctest */,
+				22102CAD1C866E8D000E074B /* GoodRUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				223365251C7EB6190049E58F /* Constants.swift */,
+				22AC55871C86925400ABF126 /* Utilities.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -186,6 +250,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		22102C9E1C866E77000E074B /* GoodRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22102CA81C866E77000E074B /* Build configuration list for PBXNativeTarget "GoodRTests" */;
+			buildPhases = (
+				22102C9B1C866E77000E074B /* Sources */,
+				22102C9C1C866E77000E074B /* Frameworks */,
+				22102C9D1C866E77000E074B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22102CA51C866E77000E074B /* PBXTargetDependency */,
+			);
+			name = GoodRTests;
+			productName = GoodRTests;
+			productReference = 22102C9F1C866E77000E074B /* GoodRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22102CAC1C866E8D000E074B /* GoodRUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22102CB41C866E8D000E074B /* Build configuration list for PBXNativeTarget "GoodRUITests" */;
+			buildPhases = (
+				22102CA91C866E8D000E074B /* Sources */,
+				22102CAA1C866E8D000E074B /* Frameworks */,
+				22102CAB1C866E8D000E074B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22102CB31C866E8D000E074B /* PBXTargetDependency */,
+			);
+			name = GoodRUITests;
+			productName = GoodRUITests;
+			productReference = 22102CAD1C866E8D000E074B /* GoodRUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		223365001C7E98000049E58F /* GoodR */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 223365131C7E98000049E58F /* Build configuration list for PBXNativeTarget "GoodR" */;
@@ -216,6 +316,16 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Sam Rabeeh - RCI";
 				TargetAttributes = {
+					22102C9E1C866E77000E074B = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LRJ8KGQKMZ;
+						TestTargetID = 223365001C7E98000049E58F;
+					};
+					22102CAC1C866E8D000E074B = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LRJ8KGQKMZ;
+						TestTargetID = 223365001C7E98000049E58F;
+					};
 					223365001C7E98000049E58F = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = LRJ8KGQKMZ;
@@ -236,11 +346,27 @@
 			projectRoot = "";
 			targets = (
 				223365001C7E98000049E58F /* GoodR */,
+				22102C9E1C866E77000E074B /* GoodRTests */,
+				22102CAC1C866E8D000E074B /* GoodRUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		22102C9D1C866E77000E074B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22102CAB1C866E8D000E074B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		223364FF1C7E98000049E58F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +432,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		22102C9B1C866E77000E074B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22102CA21C866E77000E074B /* GoodRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22102CA91C866E8D000E074B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22102CB01C866E8D000E074B /* GoodRUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		223364FD1C7E98000049E58F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,11 +458,25 @@
 				22FFC9F21C814E0700F1E3EC /* CustomTextField.swift in Sources */,
 				223365231C7EB54A0049E58F /* CustomDesignView.swift in Sources */,
 				223365261C7EB6190049E58F /* Constants.swift in Sources */,
+				22AC55881C86925400ABF126 /* Utilities.swift in Sources */,
 				22FFC9F01C81342D00F1E3EC /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22102CA51C866E77000E074B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 223365001C7E98000049E58F /* GoodR */;
+			targetProxy = 22102CA41C866E77000E074B /* PBXContainerItemProxy */;
+		};
+		22102CB31C866E8D000E074B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 223365001C7E98000049E58F /* GoodR */;
+			targetProxy = 22102CB21C866E8D000E074B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		223365081C7E98000049E58F /* Main.storyboard */ = {
@@ -342,6 +498,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		22102CA61C866E77000E074B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoodRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.GoodRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodR.app/GoodR";
+			};
+			name = Debug;
+		};
+		22102CA71C866E77000E074B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoodRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.GoodRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodR.app/GoodR";
+			};
+			name = Release;
+		};
+		22102CB51C866E8D000E074B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoodRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.GoodRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoodR;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		22102CB61C866E8D000E074B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoodRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rabeeh.GoodRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GoodR;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		223365111C7E98000049E58F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -462,6 +666,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		22102CA81C866E77000E074B /* Build configuration list for PBXNativeTarget "GoodRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22102CA61C866E77000E074B /* Debug */,
+				22102CA71C866E77000E074B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22102CB41C866E8D000E074B /* Build configuration list for PBXNativeTarget "GoodRUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22102CB51C866E8D000E074B /* Debug */,
+				22102CB61C866E8D000E074B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		223364FC1C7E98000049E58F /* Build configuration list for PBXProject "GoodR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
