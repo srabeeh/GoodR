@@ -9,15 +9,29 @@
 import UIKit
 import Firebase
 
-class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var postDescField: CustomTextField!
+    @IBOutlet weak var selectUploadImage: CustomImage!
+    
+    
     var posts = [Post]()
+    
+    var imagePicker: UIImagePickerController!
+    
+    static var imageCache = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 390
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         
         DataService.dataService.REF_FIREBASE_POSTS.observeEventType(.Value, withBlock: {snapshot in
     
@@ -56,11 +70,45 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         let post = posts[indexPath.row]
         print(post.postDescription)
+        
         if let cell = tableView.dequeueReusableCellWithIdentifier("GoodieCell") as? GoodieCell {
-            cell.configureCell(post)
+            
+            // If a cell is off screen because a new one came in to make this call..
+            cell.request?.cancel()
+            
+            var img: UIImage?
+            
+            if let url = post.imageUrl {
+              img = GoodiesFeedVC.imageCache.objectForKey(url) as? UIImage
+            }
+            
+            cell.configureCell(post, img: img)
             return cell
+            
         } else {
             return GoodieCell()
         }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let post = posts[indexPath.row]
+        if post.imageUrl == nil {
+            return 180
+        }
+        else{
+            return tableView.estimatedRowHeight
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        selectUploadImage.image = image
+    }
+    
+    @IBAction func selectImage(sender: UITapGestureRecognizer) {
+        presentViewController(imagePicker, animated: true, completion: nil )
+    }
+    
+    @IBAction func makePost(sender: AnyObject) {
     }
 }

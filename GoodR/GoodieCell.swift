@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class GoodieCell: UITableViewCell {
     
@@ -16,7 +17,8 @@ class GoodieCell: UITableViewCell {
     @IBOutlet weak var likesLabel: UILabel!
     
     var post: Post!
-
+    var request: Request?
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -35,12 +37,29 @@ class GoodieCell: UITableViewCell {
         goodieImage.clipsToBounds = true
     }
     
-    func configureCell(post: Post){
+    func configureCell(post: Post, img: UIImage?){
         self.post = post
         self.likesLabel.text = "\(post.likes)"
         self.descriptionText.text = "\(post.postDescription)"
         
-        
+        if post.imageUrl != nil {
+            if img != nil {
+                self.goodieImage.image = img
+            } else {
+                request = Alamofire.request(.GET, post.imageUrl!).validate(contentType: ["image/*"]).response(completionHandler: { request, response, data, err in
+                    
+                    if err == nil {
+                        // To Do: error handle the let below
+                        let img = UIImage(data: data!)!
+                        self.goodieImage.image = img
+                        GoodiesFeedVC.imageCache.setObject(img, forKey: self.post.imageUrl!)
+                        
+                    }
+                })
+            }
+        } else {
+            self.goodieImage.hidden = true
+        }
     }
 
 }
