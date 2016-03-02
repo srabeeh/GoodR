@@ -409,6 +409,7 @@
                                         <connections>
                                             <outlet property="descriptionText" destination="Zfv-YQ-fIz" id="Ykn-2x-a34"/>
                                             <outlet property="goodieImage" destination="fuX-3A-mHj" id="RZP-Rd-Pgu"/>
+                                            <outlet property="likeImage" destination="RJA-5c-tn2" id="9d1-9c-U6C"/>
                                             <outlet property="likesLabel" destination="bw4-ej-iVF" id="5NN-Zx-sx6"/>
                                             <outlet property="profileImage" destination="CqJ-Wz-zdL" id="UoV-GE-Ggr"/>
                                         </connections>
