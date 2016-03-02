@@ -24,6 +24,7 @@
 		223365261C7EB6190049E58F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365251C7EB6190049E58F /* Constants.swift */; };
 		22AC55881C86925400ABF126 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC55871C86925400ABF126 /* Utilities.swift */; };
 		22ADDCB11C81AB0100661AD9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ADDCB01C81AB0100661AD9 /* DataService.swift */; };
+		22ED99D01C86F2DD00B3112F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED99CF1C86F2DD00B3112F /* Post.swift */; };
 		22FFC9F01C81342D00F1E3EC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC9EF1C81342D00F1E3EC /* CustomButton.swift */; };
 		22FFC9F21C814E0700F1E3EC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFC9F11C814E0700F1E3EC /* CustomTextField.swift */; };
 		22FFC9F71C81585100F1E3EC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FFC9F41C81585100F1E3EC /* Bolts.framework */; };
@@ -73,6 +74,7 @@
 		223365251C7EB6190049E58F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22AC55871C86925400ABF126 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		22ADDCB01C81AB0100661AD9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		22ED99CF1C86F2DD00B3112F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		22FFC9EF1C81342D00F1E3EC /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		22FFC9F11C814E0700F1E3EC /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		22FFC9F41C81585100F1E3EC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		223365171C7E99090049E58F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				22ED99CF1C86F2DD00B3112F /* Post.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				223365071C7E98000049E58F /* ViewController.swift in Sources */,
+				22ED99D01C86F2DD00B3112F /* Post.swift in Sources */,
 				22ADDCB11C81AB0100661AD9 /* DataService.swift in Sources */,
 				223365051C7E98000049E58F /* AppDelegate.swift in Sources */,
 				22FFC9F21C814E0700F1E3EC /* CustomTextField.swift in Sources */,

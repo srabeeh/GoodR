@@ -12,6 +12,10 @@ class GoodieCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var goodieImage: UIImageView!
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var likesLabel: UILabel!
+    
+    var post: Post!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +33,14 @@ class GoodieCell: UITableViewCell {
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
         profileImage.clipsToBounds = true
         goodieImage.clipsToBounds = true
+    }
+    
+    func configureCell(post: Post){
+        self.post = post
+        self.likesLabel.text = "\(post.likes)"
+        self.descriptionText.text = "\(post.postDescription)"
+        
+        
     }
 
 }

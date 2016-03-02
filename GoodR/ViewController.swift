@@ -49,9 +49,14 @@ class ViewController: UIViewController {
                         if error != nil {
                             print("Login failed. \(error)")
                         } else {
+                            
                             // To Do: Remove print
                             print("Logged in! \(authData)")
-                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                            
+                            let user = ["provider": authData.provider!, "testColumn":"Add user profile data here?"]
+                            DataService.dataService.createFirebaseUser(authData.uid, user: user)
+                            
+                            NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                             self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                     }
                 })
@@ -78,7 +83,12 @@ class ViewController: UIViewController {
                             } else {
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
-                                DataService.dataService.REF_FIREBASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                DataService.dataService.REF_FIREBASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
+                                    
+                                    let user = ["provider": authData.provider!, "testColumn": "Coolio. Email user add is working"]
+                                    DataService.dataService.createFirebaseUser(authData.uid, user: user)
+                                })
+                                
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }
                         })

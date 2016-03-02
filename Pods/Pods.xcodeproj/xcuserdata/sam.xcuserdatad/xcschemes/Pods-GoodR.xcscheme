@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F422D46CE038CEF1E633534F'
+               BlueprintIdentifier = 'B9137300D43DFE93CD204B6C'
                BlueprintName = 'Pods-GoodR'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_GoodR.framework'>
