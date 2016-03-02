@@ -18,7 +18,7 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var postDescField: CustomTextField!
     @IBOutlet weak var selectUploadImage: CustomImage!
     
-    
+    var imageSelected = false
     var posts = [Post]()
     
     var imagePicker: UIImagePickerController!
@@ -105,6 +105,7 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         selectUploadImage.image = image
+        imageSelected = true
     }
     
     @IBAction func selectImage(sender: UITapGestureRecognizer) {
@@ -113,7 +114,7 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @IBAction func makePost(sender: AnyObject) {
         if let descriptionText = postDescField.text where descriptionText != "" {
-            if let img = selectUploadImage.image {
+            if let img = selectUploadImage.image where imageSelected == true {
                 let urlStr = "https://post.imageshack.us/upload_api.php"
                 let url = NSURL(string: urlStr)!
                 let imgData = UIImageJPEGRepresentation(img, 0.2)!
@@ -135,7 +136,7 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             if let info = result.result.value as? Dictionary<String, AnyObject>  {
                                 if let links = info["links"] as? Dictionary<String, AnyObject> {
                                     if let imgLink = links["image_link"] as? String {
-                                        print("Link: \(imgLink)")
+                                        self.postToFirebase(imgLink)
                                     }
                                 }
                             }
@@ -144,7 +145,28 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             print(error)
                         }
                 }
+            } else {
+                self.postToFirebase(nil)
             }
         }
+    }
+    
+    func postToFirebase(imgUrl: String?){
+        var post: Dictionary<String, AnyObject> = [
+            "description": postDescField.text!,
+            "likes": 0
+        ]
+        
+        if imgUrl != nil {
+            post["imageurl"] = imgUrl!
+        }
+        
+        let fireBasePost = DataService.dataService.REF_FIREBASE_POSTS.childByAutoId()
+        fireBasePost.setValue(post)
+        
+        postDescField.text = ""
+        selectUploadImage.image = UIImage(named: "Camera")
+        imageSelected = false
+        tableView.reloadData()
     }
 }
