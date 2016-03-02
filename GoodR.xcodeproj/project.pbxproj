@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		22102CA21C866E77000E074B /* GoodRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22102CA11C866E77000E074B /* GoodRTests.swift */; };
 		22102CB01C866E8D000E074B /* GoodRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22102CAF1C866E8D000E074B /* GoodRUITests.swift */; };
+		22248E3D1C86BB8200E71B21 /* GoodiesFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22248E3C1C86BB8200E71B21 /* GoodiesFeedVC.swift */; };
+		22248E3F1C86BDA800E71B21 /* GoodieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22248E3E1C86BDA800E71B21 /* GoodieCell.swift */; };
 		223365051C7E98000049E58F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365041C7E98000049E58F /* AppDelegate.swift */; };
 		223365071C7E98000049E58F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223365061C7E98000049E58F /* ViewController.swift */; };
 		2233650A1C7E98000049E58F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223365081C7E98000049E58F /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		22102CAD1C866E8D000E074B /* GoodRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22102CAF1C866E8D000E074B /* GoodRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodRUITests.swift; sourceTree = "<group>"; };
 		22102CB11C866E8D000E074B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22248E3C1C86BB8200E71B21 /* GoodiesFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodiesFeedVC.swift; sourceTree = "<group>"; };
+		22248E3E1C86BDA800E71B21 /* GoodieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodieCell.swift; sourceTree = "<group>"; };
 		223365011C7E98000049E58F /* GoodR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223365041C7E98000049E58F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		223365061C7E98000049E58F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +163,6 @@
 				223365171C7E99090049E58F /* Models */,
 				223365161C7E98F90049E58F /* Views */,
 				223365041C7E98000049E58F /* AppDelegate.swift */,
-				223365061C7E98000049E58F /* ViewController.swift */,
 				223365081C7E98000049E58F /* Main.storyboard */,
 				2233650B1C7E98000049E58F /* Assets.xcassets */,
 				2233650D1C7E98000049E58F /* LaunchScreen.storyboard */,
@@ -174,6 +177,7 @@
 				223365221C7EB54A0049E58F /* CustomDesignView.swift */,
 				22FFC9EF1C81342D00F1E3EC /* CustomButton.swift */,
 				22FFC9F11C814E0700F1E3EC /* CustomTextField.swift */,
+				22248E3E1C86BDA800E71B21 /* GoodieCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -188,6 +192,8 @@
 		223365181C7E990F0049E58F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				223365061C7E98000049E58F /* ViewController.swift */,
+				22248E3C1C86BB8200E71B21 /* GoodiesFeedVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -456,7 +462,9 @@
 				22ADDCB11C81AB0100661AD9 /* DataService.swift in Sources */,
 				223365051C7E98000049E58F /* AppDelegate.swift in Sources */,
 				22FFC9F21C814E0700F1E3EC /* CustomTextField.swift in Sources */,
+				22248E3D1C86BB8200E71B21 /* GoodiesFeedVC.swift in Sources */,
 				223365231C7EB54A0049E58F /* CustomDesignView.swift in Sources */,
+				22248E3F1C86BDA800E71B21 /* GoodieCell.swift in Sources */,
 				223365261C7EB6190049E58F /* Constants.swift in Sources */,
 				22AC55881C86925400ABF126 /* Utilities.swift in Sources */,
 				22FFC9F01C81342D00F1E3EC /* CustomButton.swift in Sources */,
