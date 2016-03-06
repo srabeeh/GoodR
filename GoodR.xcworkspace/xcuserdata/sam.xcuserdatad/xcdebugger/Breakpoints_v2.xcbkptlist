@@ -6,96 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodR/GoodieCell.swift"
-            timestampString = "478945580.801156"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "configureCell(_:img:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GoodR.GoodieCell.configureCell (GoodR.GoodieCell)(GoodR.Post, img : Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()"
-                  moduleName = "GoodR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sam/Desktop/IphoneDev/GoodR-IOS/GoodR/GoodR/GoodieCell.swift"
-                  timestampString = "478945580.812262"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "4064">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GoodR.GoodieCell.(configureCell (GoodR.GoodieCell) -&gt; (GoodR.Post, img : Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()).(closure #2)"
-                  moduleName = "GoodR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sam/Desktop/IphoneDev/GoodR-IOS/GoodR/GoodR/GoodieCell.swift"
-                  timestampString = "478945580.812515"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodR/GoodieCell.swift"
-            timestampString = "478945582.79525"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "configureCell(_:img:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoodR/GoodiesFeedVC.swift"
-            timestampString = "478954303.489164"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "makePost(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GoodR/GoodiesFeedVC.swift"
-            timestampString = "478954384.148207"
+            filePath = "GoodR/ViewController.swift"
+            timestampString = "478957046.842157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "makePost(_:)"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "emailLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

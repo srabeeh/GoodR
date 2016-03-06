@@ -51,6 +51,8 @@ class GoodieCell: UITableViewCell {
         self.post = post
         
         likeRef = DataService.dataService.REF_USER_CURRENT.childByAppendingPath("likes").childByAppendingPath(post.postKey)
+    
+        userRef = DataService.dataService.REF_FIREBASE_USERS
         
         self.likesLabel.text = "\(post.likes)"
         self.descriptionText.text = "\(post.postDescription)"
@@ -74,14 +76,11 @@ class GoodieCell: UITableViewCell {
             self.goodieImage.hidden = true
         }
         
-        userRef = DataService.dataService.REF_FIREBASE_USERS.childByAppendingPath("posts").childByAppendingPath(post.postKey)
-        userRef.observeEventType(.Value, withBlock: { snapshot in
-            if let namolo = snapshot.value as? String {
-                self.userNameLabel.text = namolo
+        userRef.observeSingleEventOfType(.ChildAdded, withBlock: { snapshot in
+            if let postUsername = snapshot.value["username"] as? String {
+                self.userNameLabel.text = postUsername
             }
         })
-        
-        
         
         // *** Firebase -> If there is no data in .Value the response is NSNull
         // do not try any other null type
