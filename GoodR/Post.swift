@@ -16,11 +16,16 @@ class Post {
     private var _likes: Int!
     private var _userName: String!
     private var _postKey: String!
+    private var _postTimeStamp: NSDate!
     
     private var _postRef: Firebase!
     
     var postKey: String {
         return _postKey
+    }
+    
+    var postRef: Firebase {
+        return _postRef
     }
     
     var postDescription: String{
@@ -39,11 +44,16 @@ class Post {
         return _userName
     }
     
-    init(postDescrption: String, imageurl: String?, username: String){
+    var timeStamp: NSDate! {
+        return _postTimeStamp
+    }
+    
+    init(postDescrption: String, imageurl: String?, username: String, timestamp: NSDate){
         
         self._postDesc = postDescrption
         self._imageUrl = imageurl
         self._userName = username
+        self._postTimeStamp = timestamp
     }
     
     init(postKey: String, dictionary: Dictionary<String, AnyObject>){
@@ -60,6 +70,10 @@ class Post {
         
         if let desc = dictionary["description"] as? String {
             self._postDesc = desc
+        }
+        
+        if let timestamp = dictionary["timestamp"] as? NSDate {
+            self._postTimeStamp = timestamp
         }
         
         self._postRef = DataService.dataService.REF_FIREBASE_POSTS.childByAppendingPath(self._postKey)

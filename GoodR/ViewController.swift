@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var profileUserNameField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,8 @@ class ViewController: UIViewController {
                             // To Do: Remove print
                             print("Logged in! \(authData)")
                             
-                            let user = ["provider": authData.provider!, "testColumn":"Add user profile data here?"]
+                            
+                            let user = ["provider": authData.provider!, "username":"\(self.profileUserNameField.text!)"]
                             DataService.dataService.createFirebaseUser(authData.uid, user: user)
                             
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
@@ -85,7 +87,7 @@ class ViewController: UIViewController {
                                 
                                 DataService.dataService.REF_FIREBASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
                                     
-                                    let user = ["provider": authData.provider!, "testColumn": "Coolio. Email user add is working"]
+                                    let user = ["provider": authData.provider!, "profileusername": "Great Warrior"]
                                     DataService.dataService.createFirebaseUser(authData.uid, user: user)
                                 })
                                 

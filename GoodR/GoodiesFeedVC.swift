@@ -35,7 +35,7 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        DataService.dataService.REF_FIREBASE_POSTS.observeEventType(.Value, withBlock: {snapshot in
+        DataService.dataService.REF_FIREBASE_POSTS.queryOrderedByChild("timestamp").observeEventType(.Value, withBlock: {snapshot in
     
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot]{
                 self.posts = []
@@ -152,9 +152,15 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func postToFirebase(imgUrl: String?){
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let now = NSDate()
+        let nowText = formatter.stringFromDate(now)
+        
         var post: Dictionary<String, AnyObject> = [
             "description": postDescField.text!,
-            "likes": 0
+            "likes": 0,
+            "timestamp": nowText
         ]
         
         if imgUrl != nil {
@@ -163,6 +169,9 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         let fireBasePost = DataService.dataService.REF_FIREBASE_POSTS.childByAutoId()
         fireBasePost.setValue(post)
+        
+         let fireBaseUserPost = DataService.dataService.REF_USER_CURRENT.childByAppendingPath("posts").childByAppendingPath(fireBasePost.key)
+        fireBaseUserPost.setValue("true")
         
         postDescField.text = ""
         selectUploadImage.image = UIImage(named: "Camera")

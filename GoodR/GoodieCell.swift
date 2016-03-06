@@ -17,10 +17,12 @@ class GoodieCell: UITableViewCell {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
     
     var post: Post!
     var request: Request?
     var likeRef = Firebase()
+    var userRef = Firebase()
  
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +49,9 @@ class GoodieCell: UITableViewCell {
     
     func configureCell(post: Post, img: UIImage?){
         self.post = post
+        
         likeRef = DataService.dataService.REF_USER_CURRENT.childByAppendingPath("likes").childByAppendingPath(post.postKey)
+        
         self.likesLabel.text = "\(post.likes)"
         self.descriptionText.text = "\(post.postDescription)"
         
@@ -70,10 +74,20 @@ class GoodieCell: UITableViewCell {
             self.goodieImage.hidden = true
         }
         
+        userRef = DataService.dataService.REF_FIREBASE_USERS.childByAppendingPath("posts").childByAppendingPath(post.postKey)
+        userRef.observeEventType(.Value, withBlock: { snapshot in
+            if let namolo = snapshot.value as? String {
+                self.userNameLabel.text = namolo
+            }
+        })
+        
+        
+        
         // *** Firebase -> If there is no data in .Value the response is NSNull
         // do not try any other null type
+
         likeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            if let likeDoesNotExist = snapshot.value as? NSNull {
+            if let _ = snapshot.value as? NSNull {
                 self.likeImage.image = UIImage(named: "Heart-1")
             } else {
                 self.likeImage.image = UIImage(named: "HeartFull-1")
@@ -83,7 +97,7 @@ class GoodieCell: UITableViewCell {
     
     func likeTapped(sender: UITapGestureRecognizer){
         likeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            if let doesNotExist = snapshot.value as? NSNull {
+            if let _ = snapshot.value as? NSNull {
                 self.likeImage.image = UIImage(named: "HeartFull-1")
                 self.post.adjustLikes(true)
                 self.likeRef.setValue(true)
