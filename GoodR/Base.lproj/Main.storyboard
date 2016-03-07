@@ -196,7 +196,7 @@
                                                     <constraint firstAttribute="width" constant="90" id="LvB-2r-6if"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-ce-dNr" customClass="CustomButton" customModule="GoodR" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-ce-dNr" customClass="CustomButton" customModule="GoodR" customModuleProvider="target">
                                                 <rect key="frame" x="110" y="36" width="430" height="33"/>
                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
