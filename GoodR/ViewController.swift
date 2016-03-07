@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             } else {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
             
-                DataService.dataService.REF_FIREBASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                DataService.dataService.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
                         
                         if error != nil {
                             print("Login failed. \(error)")
@@ -71,21 +71,21 @@ class ViewController: UIViewController {
             
             if email.isEmail{
                 
-                DataService.dataService.REF_FIREBASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
+                DataService.dataService.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
                 
                 if error != nil {
                     
                     print(error)
                     
                     if error.code == STATUS_USER_INVALID {
-                        DataService.dataService.REF_FIREBASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
+                        DataService.dataService.REF_BASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
                             
                             if error != nil {
                                 self.showErrorAlert("Problem creating account. Try something else", title: "Could not create account.")
                             } else {
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
-                                DataService.dataService.REF_FIREBASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
+                                DataService.dataService.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
                                     
                                     let user = ["provider": authData.provider!, "username": "Great Warrior"]
                                     DataService.dataService.createFirebaseUser(authData.uid, user: user)

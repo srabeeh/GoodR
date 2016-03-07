@@ -14,7 +14,7 @@ class Post {
     private var _postDesc: String!
     private var _imageUrl: String?
     private var _likes: Int!
-    private var _userName: String!
+    private var _authKey: String!
     private var _postKey: String!
     private var _postTimeStamp: NSDate!
     
@@ -22,6 +22,10 @@ class Post {
     
     var postKey: String {
         return _postKey
+    }
+    
+    var authorKey: String {
+        return _authKey
     }
     
     var postRef: Firebase {
@@ -40,25 +44,24 @@ class Post {
         return _likes
     }
     
-    var userName: String!{
-        return _userName
-    }
-    
     var timeStamp: NSDate! {
         return _postTimeStamp
     }
     
-    init(postDescrption: String, imageurl: String?, username: String, timestamp: NSDate){
-        
-        self._postDesc = postDescrption
+    init(postDesc: String, author: String, imageurl: String?){
+        self._postDesc = postDesc
+        self._authKey = author
         self._imageUrl = imageurl
-        self._userName = username
-        self._postTimeStamp = timestamp
     }
+    
     
     init(postKey: String, dictionary: Dictionary<String, AnyObject>){
         
         self._postKey = postKey
+        
+        if let author = dictionary["author"] as? String {
+         self._authKey = author
+        }
         
         if let likes = dictionary["likes"] as? Int {
             self._likes = likes
@@ -76,18 +79,19 @@ class Post {
             self._postTimeStamp = timestamp
         }
         
-        self._postRef = DataService.dataService.REF_FIREBASE_POSTS.childByAppendingPath(self._postKey)
+        self._postRef = DataService.dataService.REF_POSTS.childByAppendingPath(self._postKey)
+        
     }
     
     func adjustLikes(addLike: Bool){
-    if addLike {
-        _likes = _likes + 1
-    } else {
-        _likes = _likes - 1
+        if addLike {
+            _likes = _likes + 1
+        } else {
+            _likes = _likes - 1
     
         }
         
-        // To Do: Should this be _Likes or Likes
         _postRef.childByAppendingPath("likes").setValue(_likes)
+        
     }
 }

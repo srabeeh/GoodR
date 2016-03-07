@@ -35,12 +35,12 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        DataService.dataService.REF_FIREBASE_POSTS.queryOrderedByChild("timestamp").observeEventType(.Value, withBlock: {snapshot in
-    
+        DataService.dataService.REF_POSTS.observeEventType(.Value, withBlock: {snapshot in
+            self.posts = []
+            
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot]{
-                self.posts = []
                 for snap in snapshots {
-                    
+                    print("Snap Details: \(snap)")
                     if let postDictionary = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let goodie = Post(postKey: key, dictionary: postDictionary)
@@ -52,13 +52,7 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         })
  
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -71,7 +65,6 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let post = posts[indexPath.row]
-        print(post.postDescription)
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("GoodieCell") as? GoodieCell {
             
@@ -132,7 +125,9 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                         switch encodingResult {
                         case .Success(let upload, _, _):
                            upload.responseJSON(completionHandler: { result in
-                            print(encodingResult)
+                            
+                            print("JSON Response Encoding Result: \(encodingResult)")
+                            
                             if let info = result.result.value as? Dictionary<String, AnyObject>  {
                                 if let links = info["links"] as? Dictionary<String, AnyObject> {
                                     if let imgLink = links["image_link"] as? String {
@@ -142,7 +137,7 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             }
                            })
                         case .Failure(let error):
-                            print(error)
+                            print("Image Post Error: \(error)")
                         }
                 }
             } else {
@@ -160,14 +155,15 @@ class GoodiesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         var post: Dictionary<String, AnyObject> = [
             "description": postDescField.text!,
             "likes": 0,
-            "timestamp": nowText
+            "timestamp": nowText,
+            "author": NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
         ]
         
         if imgUrl != nil {
             post["imageurl"] = imgUrl!
         }
         
-        let fireBasePost = DataService.dataService.REF_FIREBASE_POSTS.childByAutoId()
+        let fireBasePost = DataService.dataService.REF_POSTS.childByAutoId()
         fireBasePost.setValue(post)
         
          let fireBaseUserPost = DataService.dataService.REF_USER_CURRENT.childByAppendingPath("posts").childByAppendingPath(fireBasePost.key)

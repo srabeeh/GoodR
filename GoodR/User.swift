@@ -18,13 +18,13 @@ class User {
         return _userName
     }
     
-    var UserRef: Firebase {
+    var userRef: Firebase {
         return _UserRef
     }
     
     init (profileName: String!) {
         self._userName = profileName
-        self._UserRef = DataService.dataService.REF_FIREBASE_USERS.childByAppendingPath("users")
+        self._UserRef = DataService.dataService.REF_USERS
     }
 
 }
