@@ -85,6 +85,10 @@ class GoodieCell: UITableViewCell {
                 self.likeImage.image = UIImage(named: "HeartFull-1")
             }
         })
+        
+        // Lookup post author's username using post.author
+        
+        // Lookup post authors profile image as well. We need to setup the db for this.
     }
     
     func likeTapped(sender: UITapGestureRecognizer){
